@@ -1,0 +1,136 @@
+# SAP MM Interview Questions and Answers
+
+## Basic SAP MM
+
+### 1. What is SAP MM?
+
+SAP MM stands for Materials Management. It supports procurement and inventory management processes.
+
+### 2. What is a Purchase Requisition?
+
+A Purchase Requisition is an internal request to procure materials or services.
+
+### 3. What is a Purchase Order?
+
+A Purchase Order is a formal purchasing document sent to a supplier.
+
+### 4. What is Goods Receipt?
+
+Goods Receipt is the process of recording the receipt of materials against a purchasing document.
+
+### 5. What is Invoice Verification?
+
+Invoice Verification is the process of checking and posting a supplier invoice.
+
+## Organization Structure
+
+### 6. What is a Plant?
+
+A plant is an organizational unit representing a location where materials are produced, stored or managed.
+
+### 7. What is a Storage Location?
+
+A storage location is a location within a plant where stock is physically or logically stored.
+
+### 8. What is a Purchasing Organization?
+
+A purchasing organization is responsible for procurement activities and supplier negotiations.
+
+### 9. What is a Purchasing Group?
+
+A purchasing group represents a buyer or group of buyers responsible for purchasing activities.
+
+## Purchasing
+
+### 10. What is the P2P process?
+
+P2P stands for Procure to Pay. It covers procurement from the initial requirement through purchasing, goods receipt, invoice verification and payment.
+
+### 11. What is a Movement Type?
+
+A movement type identifies the type of material movement and controls how SAP processes the movement.
+
+Example:
+
+101 - Goods Receipt for Purchase Order
+
+### 12. What is Account Assignment?
+
+Account Assignment determines which cost object or account is charged for a purchasing transaction.
+
+Examples include:
+
+- Cost Center
+- Asset
+- Internal Order
+- Project
+
+## S/4HANA
+
+### 13. What is Business Partner?
+
+Business Partner is the central master data object used to manage business partners in SAP S/4HANA.
+
+### 14. What is automatic account determination?
+
+Automatic account determination determines the relevant G/L accounts for inventory and purchasing-related postings based on configuration and transaction data.
+
+### 15. What is the purpose of OBYC?
+
+OBYC is used to configure automatic account determination for relevant inventory management transactions.
+
+## Scenario-Based Questions
+
+### 16. PO creation is giving an error. What will you check?
+
+I would first read the exact error message and then check:
+
+- Supplier
+- Material
+- Plant
+- Purchasing organization
+- Purchasing group
+- Master data
+- Document type
+- Account assignment
+- Configuration
+
+### 17. Goods Receipt cannot be posted. What will you check?
+
+I would check:
+
+- Purchase Order status
+- Material
+- Plant
+- Storage location
+- Quantity
+- Movement type
+- Delivery information
+- SAP error message
+
+### 18. How would you troubleshoot an SAP MM issue?
+
+My approach would be:
+
+1. Understand the business issue.
+2. Reproduce the problem.
+3. Read the SAP error message.
+4. Identify whether it is master data, configuration or transactional data.
+5. Check the relevant settings.
+6. Fix the root cause.
+7. Test the solution.
+8. Document the resolution.
+
+## Interview Tip
+
+Do not only memorize transaction codes.
+
+Explain the:
+
+Business Requirement
+→ SAP Process
+→ Configuration
+→ Master Data
+→ Transaction
+→ Accounting/Inventory Impact
+→ Testing
