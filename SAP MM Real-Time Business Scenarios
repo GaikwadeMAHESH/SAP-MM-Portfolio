@@ -1,0 +1,133 @@
+# SAP MM Real-Time Business Scenarios
+
+## Scenario 1 - Standard Material Procurement
+
+### Business Requirement
+
+A company requires 500 units of raw material for production.
+
+### Process
+
+Purchase Requisition
+→ Purchase Order
+→ Goods Receipt
+→ Invoice Verification
+→ Payment
+
+### Consultant Activities
+
+- Understand business requirement
+- Check material master
+- Check supplier
+- Create/test purchasing document
+- Verify goods receipt
+- Test invoice verification
+- Analyze errors
+
+---
+
+## Scenario 2 - Purchase Order Error
+
+### Problem
+
+User cannot create a Purchase Order.
+
+### Possible Reasons
+
+- Missing mandatory master data
+- Incorrect purchasing organization
+- Incorrect plant assignment
+- Missing supplier purchasing data
+- Material master issue
+- Incorrect document type
+- Account assignment issue
+
+### Troubleshooting Approach
+
+1. Read the complete SAP error message.
+2. Identify the affected field.
+3. Check master data.
+4. Check organizational assignments.
+5. Check configuration.
+6. Correct the issue.
+7. Retest the transaction.
+
+---
+
+## Scenario 3 - Goods Receipt Error
+
+### Problem
+
+User receives an error while posting Goods Receipt.
+
+### Possible Reasons
+
+- Incorrect movement type
+- Purchase Order quantity issue
+- Delivery date issue
+- Material master issue
+- Plant/storage location issue
+- PO status issue
+
+### Troubleshooting
+
+1. Check PO.
+2. Check material.
+3. Check plant.
+4. Check stock/storage information.
+5. Verify movement type.
+6. Review the SAP error message.
+7. Retest MIGO.
+
+---
+
+## Scenario 4 - Invoice Verification Difference
+
+### Problem
+
+Invoice amount does not match the Purchase Order.
+
+### Possible Reasons
+
+- Price difference
+- Quantity difference
+- Tax difference
+- Freight charges
+- Invoice quantity higher than received quantity
+
+### Consultant Approach
+
+Perform a three-way check:
+
+PO
++
+GR
++
+Invoice
+
+Then identify where the difference originated.
+
+---
+
+## Scenario 5 - Stock Transfer
+
+### Business Requirement
+
+Material needs to be transferred from Plant A to Plant B.
+
+### Process
+
+Check stock
+→ Create transfer document
+→ Goods issue
+→ Goods receipt
+→ Verify stock
+
+### Consultant Checks
+
+- Material availability
+- Supplying plant
+- Receiving plant
+- Movement type
+- Stock status
+- Configuration
