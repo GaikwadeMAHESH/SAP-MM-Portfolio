@@ -1,0 +1,143 @@
+# SAP MM - Procure to Pay (P2P) Process
+
+## Overview
+
+Procure to Pay (P2P) is an end-to-end SAP MM business process used to procure materials and services from external suppliers.
+
+The P2P process starts with identifying a business requirement and ends with invoice verification and payment.
+
+## P2P Process Flow
+
+Business Requirement
+        ↓
+Purchase Requisition (PR)
+        ↓
+Source Determination
+        ↓
+Request for Quotation (RFQ)
+        ↓
+Quotation Comparison
+        ↓
+Purchase Order (PO)
+        ↓
+Goods Receipt (GR)
+        ↓
+Invoice Verification
+        ↓
+Vendor Payment
+
+## 1. Purchase Requisition (PR)
+
+A Purchase Requisition is an internal request to procure a material or service.
+
+### Purpose
+
+- Request materials or services
+- Communicate purchasing requirements
+- Start the procurement process
+
+### Common Transaction
+
+ME51N - Create Purchase Requisition
+
+## 2. Source Determination
+
+Source determination identifies a suitable supplier for the required material.
+
+Possible sources include:
+
+- Source List
+- Purchasing Info Record
+- Quota Arrangement
+- Contracts
+
+## 3. Request for Quotation (RFQ)
+
+An RFQ is sent to potential suppliers to obtain quotations.
+
+### Common Transaction
+
+ME41 - Create RFQ
+
+## 4. Purchase Order (PO)
+
+A Purchase Order is a formal document issued to a supplier requesting materials or services.
+
+### Common Transaction
+
+ME21N - Create Purchase Order
+
+Important PO information:
+
+- Supplier
+- Material
+- Quantity
+- Price
+- Plant
+- Delivery date
+- Storage location
+- Purchasing organization
+
+## 5. Goods Receipt (GR)
+
+Goods Receipt is posted when the ordered material is physically received.
+
+### Common Transaction
+
+MIGO
+
+For a standard purchase order, movement type 101 is commonly used for goods receipt.
+
+## 6. Invoice Verification
+
+Invoice Verification checks the supplier invoice against purchasing and goods receipt information.
+
+### Common Transaction
+
+MIRO
+
+A common control is the three-way match:
+
+Purchase Order
++
+Goods Receipt
++
+Invoice
+
+## 7. Vendor Payment
+
+After invoice verification and the required financial processing, the supplier payment is processed by the Finance department.
+
+## Important SAP MM Transactions
+
+| Process | Transaction |
+|---|---|
+| Create PR | ME51N |
+| Change PR | ME52N |
+| Display PR | ME53N |
+| Create RFQ | ME41 |
+| Create PO | ME21N |
+| Change PO | ME22N |
+| Display PO | ME23N |
+| Goods Receipt | MIGO |
+| Invoice Verification | MIRO |
+
+## Example Business Scenario
+
+A company requires 100 units of raw material.
+
+1. User creates a Purchase Requisition.
+2. Purchasing department identifies a suitable supplier.
+3. RFQ may be created and quotations compared.
+4. Purchase Order is created for the selected supplier.
+5. Supplier delivers the material.
+6. Warehouse posts Goods Receipt.
+7. Supplier sends an invoice.
+8. Invoice is verified in SAP.
+9. Finance processes supplier payment.
+
+## Key Learning
+
+The P2P process connects purchasing, inventory management and finance.
+
+As an SAP MM consultant, understanding both the SAP transactions and the underlying business process is important.
