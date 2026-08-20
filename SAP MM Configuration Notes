@@ -1,0 +1,120 @@
+# SAP MM Configuration Notes
+
+## Overview
+
+This repository contains SAP MM configuration concepts practiced in an SAP S/4HANA training/practice environment.
+
+## Enterprise Structure
+
+### Company
+
+Represents an organization or group of companies.
+
+### Company Code
+
+The smallest organizational unit for which complete financial statements can be created.
+
+### Plant
+
+A plant represents a location where materials are produced, stored or managed.
+
+### Storage Location
+
+A storage location represents a physical or logical location within a plant where stock is stored.
+
+### Purchasing Organization
+
+An organizational unit responsible for procurement activities and supplier negotiations.
+
+### Purchasing Group
+
+A purchasing group represents the buyer or group of buyers responsible for purchasing activities.
+
+## Important Relationships
+
+Company Code
+↓
+Plant
+↓
+Storage Location
+
+Purchasing Organization
+↓
+Plant
+
+Purchasing Organization
+↓
+Company Code
+
+## Master Data
+
+Important SAP MM master data includes:
+
+- Material Master
+- Business Partner / Supplier
+- Purchasing Info Record
+- Source List
+- Quota Arrangement
+
+## Purchasing Configuration Topics
+
+Important configuration areas:
+
+- Purchase Requisition
+- Request for Quotation
+- Purchase Order
+- Document Types
+- Number Ranges
+- Item Categories
+- Account Assignment Categories
+- Release/Approval Procedures
+
+## Inventory Management
+
+Important topics:
+
+- Movement Types
+- Goods Receipt
+- Goods Issue
+- Stock Transfer
+- Transfer Posting
+- Physical Inventory
+
+## Automatic Account Determination
+
+Automatic account determination determines the appropriate G/L accounts during relevant inventory and purchasing transactions.
+
+Important concepts:
+
+- Valuation Area
+- Valuation Class
+- Transaction/Event Keys
+- G/L Account Assignment
+- OBYC
+
+## S/4HANA Business Partner
+
+In SAP S/4HANA, supplier master data is managed using the Business Partner approach.
+
+Important concepts:
+
+- Business Partner
+- Supplier Role
+- BP Grouping
+- Supplier Account Group
+- Purchasing Data
+- Company Code Data
+
+## Consultant Learning Focus
+
+While learning configuration, understand:
+
+1. Business requirement
+2. Configuration
+3. Master data
+4. Transaction execution
+5. Accounting impact
+6. Testing
+7. Error analysis
+
+> Note: These are learning notes created in a practice/training environment and do not contain confidential client information.
